@@ -1,0 +1,7 @@
+{
+  "name": "appssafe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
