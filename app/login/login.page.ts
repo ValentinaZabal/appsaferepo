@@ -50,4 +50,20 @@ export class LoginPage implements OnInit {
     }
   }
 
-}
+  /* salio mal 
+  mostrarContra() {
+    var x = document.getElementById("contra");
+    var y = document.getElementById("ocultar");
+    var z = document.getElementById("mostar");
+
+    if (x.inputMode == "password") {
+      x.inputMode ="text";
+      y.style.display="block";
+      z.style.display="none";
+    }else{
+      x.inputMode="password";
+      y.style.display="none";
+      z.style.display="block";
+    }
+  */
+  }
