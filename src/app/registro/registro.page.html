@@ -1,35 +1,66 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-button slot="start" [routerLink]="['/login']" fill="clear" id="flecha">
+  <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+</ion-button>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Registro</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password" ></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
-        </ion-item>
-        <br>
-        <ion-button (click)="guardar()">Registrarse
-        </ion-button>
+      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()" id="formulario">
+        <div class="nombredeformulario"><p>Nombre</p>
+          <ion-item>
+            <ion-input formControlName="nombre" placeholder="Ingresa tu nombre"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Apellido</p>
+          <ion-item>
+            <ion-input formControlName="apellido" placeholder="Ingresa tu contraseña"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Email</p>
+          <ion-item>
+            <ion-input formControlName="email" type="email" placeholder="Ingresa tu mail"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Telefono</p>
+          <ion-item>
+            <ion-input formControlName="telefono" placeholder="Ingresa tu telefono"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Fecha de nacimiento</p>
+          <ion-item>
+            <ion-input formControlName="fechadenacimiento" type="date" id="cumpleanos" placeholder="dd/mm/aaaa"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Usuario</p>
+          <ion-item>
+            <ion-input formControlName="usuario" placeholder="Crear el nombre de usuario"></ion-input>
+          </ion-item>
+          <span class="errormessage" *ngIf= "f['usuario'].getError('minlength')!=null">El nombre de usuario es demasiado corto</span>
+        </div>
+
+        <div class="nombredeformulario"><p>Contraseña</p>
+          <ion-item>
+            <ion-input type="password" formControlName="password" placeholder="Crear tu contraseña" id="password"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="nombredeformulario"><p>Confirme tu contraseña</p>
+          <ion-item>
+            <ion-input type="password" formControlName="confirmacionPassword" placeholder="Vuelve a escribir tu contraseña" id="password2"></ion-input>
+          </ion-item>
+          <span class="errormessage" *ngIf= "f['confirmacionPassword'].getError('confirmarcontra')!=null">Las contraseñas deben coincidir</span>
+        </div>
+
+        <div class="contenedor">
+          <ion-checkbox  formControlName="terminosycondiciones" class="terminos" ></ion-checkbox>
+          <ion-label>Acepto terminos y condiciones </ion-label>
+        </div>                 
       </form>
-    </ion-card-content>
-  </ion-card>
+      <br>
+      <ion-button (click)="guardar()" size="default"  expand="block">
+        Registrarse
+      </ion-button>
 </ion-content>
