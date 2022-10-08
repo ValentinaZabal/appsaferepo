@@ -53,11 +53,11 @@
           </ion-item>
           <span class="errormessage" *ngIf= "f['confirmacionPassword'].getError('confirmarcontra')!=null">Las contraseñas deben coincidir</span>
         </div>
-
-        <div class="contenedor">
-          <ion-checkbox  formControlName="terminosycondiciones" class="terminos" ></ion-checkbox>
-          <ion-label>Acepto terminos y condiciones </ion-label>
-        </div>                 
+        
+        <ion-item id="terminos">
+          <ion-checkbox slot="start" formControlName="terminosycondiciones"></ion-checkbox>
+          <ion-label>Acepto terminos y condiciones</ion-label>
+        </ion-item>
       </form>
       <br>
       <ion-button (click)="guardar()" size="default"  expand="block">

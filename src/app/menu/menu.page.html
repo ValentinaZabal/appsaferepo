@@ -1,0 +1,62 @@
+
+<ion-split-pane contentId="main">
+  <ion-menu side="start" menuId="menuPrincipal" contentId="main">
+      <ion-toolbar>
+        <ion-title>Mi perfil</ion-title>
+        <ion-icon name="menu" slot="start" style="font-size: 23px; margin-left: 10px;" (click)= "onClick()"></ion-icon>
+      </ion-toolbar>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="['inicio']">
+            <ion-icon slot="start" name="home"></ion-icon>
+            Inicio
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="['reservas']">
+            <ion-icon slot="start" name="calendar-outline"></ion-icon>
+            Mis reservas
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="['ayuda']">
+            <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+            Ayuda
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="['nosotras']">
+            <ion-icon slot="start" name="people-circle"></ion-icon>
+            Nosotras
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="['nosotras']">
+            <ion-icon slot="start" name="settings"></ion-icon>
+            Nosotras
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-item (click)="salir()" routerDirection="root" lines="none" detail="false">
+            <ion-icon slot="start" [name]="'exit-outline'"></ion-icon>
+            <ion-label>Salir</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+       
+      </ion-list>
+    </ion-content>
+
+    <ion-footer>
+      <ion-icon name="call-outline" ></ion-icon>
+      413-336-5939
+    </ion-footer>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>

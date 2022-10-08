@@ -38,7 +38,7 @@ export class LoginPage implements OnInit {
     if(usuario.nombre == f.nombre && usuario.password == f.password){
       console.log('Ingresado');
       localStorage.setItem('ingresado','true');
-      this.navCtrl.navigateRoot('inicio');
+      this.navCtrl.navigateRoot('menu/inicio');
     }else{
       const alert = await this.alertController.create({
         header: 'Datos incorrectos',
@@ -50,25 +50,5 @@ export class LoginPage implements OnInit {
     }
   }
 
-  /* salio mal 
-    <span class="ojos" onclick="mostrarContra()">
-       <ion-icon id="mostrar" name="eye" title="Mostar contraseña"></ion-icon>
-        <ion-icon id="ocultar" name="eye-off" title="Ocultar contraseña"></ion-icon>
-    </span>
-    -----------------------------------
-  mostrarContra() {
-    var x = document.getElementById("contra");
-    var y = document.getElementById("ocultar");
-    var z = document.getElementById("mostar");
 
-    if (x.inputMode == "password") {
-      x.inputMode ="text";
-      y.style.display="block";
-      z.style.display="none";
-    }else{
-      x.inputMode="password";
-      y.style.display="none";
-      z.style.display="block";
-    }
-  */
   }

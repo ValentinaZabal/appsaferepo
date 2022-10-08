@@ -25,12 +25,6 @@ ion-item{
     transform: translateX(-50%);
 }
 
-.contenedor {
-    float:left; 
-    width:100%;
-    margin: 15px;
-    }
-
 ion-label{
     word-wrap:normal; 
     font-weight: bold; 
@@ -52,4 +46,8 @@ ion-checkbox{
     margin-bottom: 0px;
     margin-left: 15px;
     color: red
+}
+
+#terminos{
+    border:0px;
 }

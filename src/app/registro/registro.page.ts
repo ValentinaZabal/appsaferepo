@@ -29,7 +29,7 @@ export class RegistroPage implements OnInit {
       'usuario': new FormControl("",Validators.compose([ Validators.required, Validators.minLength(6)])),
       'password': new FormControl("", Validators.required),
       'confirmacionPassword': new FormControl("", Validators.required),
-      'terminosycondiciones': new FormControl("")
+      'terminosycondiciones': new FormControl("", Validators.compose([ Validators.required, Validators.requiredTrue]))
     },
     {
       validators:this.confirmarcontra('password','confirmacionPassword')
