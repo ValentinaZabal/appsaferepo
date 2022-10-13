@@ -25,10 +25,10 @@ export class MenuPage implements OnInit {
   async salir(){
     const alert = await this.alertController.create({
       header: 'Salir',
-      message: '¿Estas seguros de que quieres salir?',
+      message: '¿Estás seguro de que quieres salir?',
       buttons: [
         {
-          text: 'No ',
+          text: 'Cancelar',
           handler: () => {
             
           }
@@ -42,5 +42,7 @@ export class MenuPage implements OnInit {
       ]
     });
 
+    await alert.present();
   }
+
 }

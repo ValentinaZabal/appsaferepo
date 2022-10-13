@@ -8,41 +8,41 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle auto-hide="true">
-          <ion-item [routerLink]="['inicio']">
+          <ion-item [routerLink]="['/menu/inicio']">
             <ion-icon slot="start" name="home"></ion-icon>
             Inicio
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="true">
-          <ion-item [routerLink]="['reservas']">
+          <ion-item [routerLink]="['/menu/reservas']">
             <ion-icon slot="start" name="calendar-outline"></ion-icon>
             Mis reservas
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="true">
-          <ion-item [routerLink]="['ayuda']">
+          <ion-item [routerLink]="['/menu/ayuda']">
             <ion-icon slot="start" name="help-circle-outline"></ion-icon>
             Ayuda
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="true">
-          <ion-item [routerLink]="['nosotras']">
+          <ion-item [routerLink]="['/menu/nosotras']">
             <ion-icon slot="start" name="people-circle"></ion-icon>
             Nosotras
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="true">
-          <ion-item [routerLink]="['nosotras']">
+          <ion-item [routerLink]="['/menu/configuracion']">
             <ion-icon slot="start" name="settings"></ion-icon>
-            Nosotras
+            Configuracion
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-menu-toggle auto-hide="true">
+        <ion-menu-toggle auto-hide="false">
           <ion-item (click)="salir()" routerDirection="root" lines="none" detail="false">
             <ion-icon slot="start" [name]="'exit-outline'"></ion-icon>
             <ion-label>Salir</ion-label>
