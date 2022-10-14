@@ -1,0 +1,31 @@
+<ion-content>
+
+      <div style="text-align: center;" >
+        <img src="./assets/img/logo.jpeg" width="250px">
+      </div>
+
+    <form [formGroup]="formularioLogin">
+        <div class="nombredeformulario"><p>Usuario</p></div>
+        <ion-item>
+          <ion-label></ion-label>
+          <ion-input formControlName="usuario" placeholder="Ingresa tu usuario"></ion-input>
+        </ion-item>
+        <div class="nombredeformulario"><p>Contraseña</p></div>
+        <ion-item>
+          <ion-label></ion-label>
+          <ion-input formControlName="password" type="password" placeholder="Ingresar contraseña" id="contra"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()" size="large" class="centradoingresar">
+        Ingresar
+      </ion-button>
+
+      <ion-button [routerLink]="['/registro']" id="botonregistar" size="default"  expand="block">
+      Registrarme
+      </ion-button>
+
+
+</ion-content>
+
+
