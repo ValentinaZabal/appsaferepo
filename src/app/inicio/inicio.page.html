@@ -1,16 +1,44 @@
-<ion-header>
-  <ion-toolbar color="primary">
-
+<div class="fondo">
+  <ion-toolbar color="white">
     <ion-buttons slot="start">
       <ion-button (click)= "onClick()">
-        <ion-icon slot="start" name="menu" style="font-size: 23px"></ion-icon>
+        <ion-icon slot="start" name="menu-outline" style="font-size: 26px"></ion-icon>
       </ion-button>
     </ion-buttons>
-
-    <ion-title>Inicio</ion-title>
+    <ion-title>INICIO</ion-title>
 
   </ion-toolbar>
-</ion-header>
+
+</div>
+
+  <div style="text-align: center;"  >
+    <img src="./assets/img/logo.jpeg" width="150px" class="logo">
+  </div>
+
+  <section class="contenedor">
+    <div class="profesion" [routerLink]="['/menu/inicio/plomeros']">
+      <img src="./assets/img/plomero.jpg"  class="imagenesprofesiones">
+      <div class="nombreprofesion"><p>Plomeria</p></div>   
+    </div>
+
+    <div class="profesion">
+      <img src="./assets/img/electricista.jpg"  class="imagenesprofesiones">
+      <div class="nombreprofesion"><p class="nombreprofesion">Electricidad</p></div>   
+    </div>
+
+    <div class="profesion">
+      <img src="./assets/img/gasista.jpg"  class="imagenesprofesiones">
+      <div class="nombreprofesion" ><p class="nombreprofesion" >Gasista</p></div>   
+    </div>
+
+    <div class="profesion">
+      <img src="./assets/img/persiana.jpg"  class="imagenesprofesiones">
+      <div class="nombreprofesion"><p class="nombreprofesion" id="serv">Otros servicios</p></div>   
+    </div>
+  </section>
+
+
+
 
 <ion-content>
   

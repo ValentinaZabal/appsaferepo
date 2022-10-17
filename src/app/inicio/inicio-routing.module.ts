@@ -6,7 +6,11 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage
+    component: InicioPage,
+    children: [ {
+      path: 'plomeros',
+      loadChildren: () => import('../plomeros/plomeros.module').then( m => m.PlomerosPageModule),
+    }]
   }
 ];
 
