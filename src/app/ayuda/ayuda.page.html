@@ -1,15 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ayuda</ion-title>
-
+<div class="fondo">
+  <ion-toolbar color="white">
     <ion-buttons slot="start">
       <ion-button (click)= "onClick()">
-        <ion-icon slot="start" name="menu" style="font-size: 26px"></ion-icon>
+        <ion-icon slot="start" name="menu-outline" style="font-size: 26px"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>Preguntas frecuentes</ion-title>
   </ion-toolbar>
-</ion-header>
+
+</div>
 
 <ion-content>
+  <div class="contenedor">
+  <div class="preguntas">
+    <div class="titulo" style="font-size:20px ;">¿Puedo cancelar el servicio?</div>
+    <div style="font-size:18px; text-align: center;">Los servicios se pueden cancelar hasta un día antes de la fecha acordada. En caso que de cancelar el mismo día se cobrará una multa </div>
+  </div>
+  <div class="preguntas">
+    <div class="titulo" style="font-size:20px ;">¿Cómo puedo saber la tarifa?</div>
+    <div style="font-size:18px; text-align: center;">Al momento de reservas te daran la tarifa correspondiente al servicio.  Cualquier gasto extra se debe avisar antes de realizar el trabajo </div>
+  </div>
+  <div class="preguntas">
+    <div class="titulo" style="font-size:20px ;">¿Cómo realizar reclamos?</div>
+    <div style="font-size:18px; text-align: center;">Tenemos un linea diponible de 07am a 20pm, de lunes a sabados, donde podremos ayudarte. Tambien contamos con un mail de reclamos safeservice@mail.com</div>
+  </div>
+
+  <div>
+    <ion-icon name="call-outline" style="font-size:15px;"></ion-icon>
+    <span style="font-size:18px; margin-left: 5px;">413-336-5939</span>
+  </div>
+</div>
+
+
 
 </ion-content>

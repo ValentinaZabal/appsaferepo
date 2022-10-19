@@ -1,16 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>nosotras</ion-title>
-
-    <ion-buttons slot="start">
-      <ion-button (click)= "onClick()">
-        <ion-icon slot="start" name="menu" style="font-size: 26px"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar color="white">
+  <ion-buttons slot="start">
+    <ion-button (click)= "onClick()">
+       <ion-icon slot="start" name="menu-outline" style="font-size: 26px"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>¿Por qué elegirnos?</ion-title>
+</ion-toolbar>
 
 <ion-content>
+  <div class="contenedor">
 
+    <div class="info" style="background-color:#FDF4C9 ;">
+      <ion-icon name="construct-outline" class="icono" style="font-size: 30px;" ></ion-icon>
+      <span style="font-size: 18px;" class="texto">Somos la primera aplicación de servicios del país</span>
+
+    </div>
+    <div class="info" style="background-color:#DFFFE8 ;">
+      <ion-icon name="shield-checkmark-outline" class="icono" style="font-size: 30px;" ></ion-icon>
+      <span style="font-size: 18px;" class="texto">Garantizamos la seguridad al momento de contratar</span>
+    </div>
+    <div class="info" style="background-color:#FDF4C9 ;">
+      <ion-icon name="calculator-outline" class="icono" style="font-size: 30px;" ></ion-icon>
+      <span style="font-size: 18px;" class="texto">Podes calcular el costo de tu servicio con antelación</span>
+    </div>
+  </div>
+  <div id="telefono">
+    <ion-icon name="call-outline" style="font-size:20px;"></ion-icon>
+    <span style="font-size:20px; margin-left: 5px;">413-336-5939</span>
+  </div>
 </ion-content>

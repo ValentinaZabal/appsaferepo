@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: InicioPage,
-    children: [ {
-      path: 'plomeros',
-      loadChildren: () => import('../plomeros/plomeros.module').then( m => m.PlomerosPageModule),
-    }]
   }
 ];
 

@@ -22,8 +22,13 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule),
-    canActivate: [IngresadoGuard]
+    canActivate: [IngresadoGuard],
+  },
+  {
+      path: 'plomeros',
+      loadChildren: () => import('./plomeros/plomeros.module').then( m => m.PlomerosPageModule),
   }
+
  
   
 ];
