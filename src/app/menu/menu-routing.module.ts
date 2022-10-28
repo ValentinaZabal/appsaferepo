@@ -26,7 +26,20 @@ const routes: Routes = [
     {
       path: 'configuracion',
       loadChildren: () => import('../configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
-    }]
+    },
+    {
+      path: 'plomeros',
+      loadChildren: () => import('../plomeros/plomeros.module').then( m => m.PlomerosPageModule),
+    },
+    {
+      path: 'electricistas',
+      loadChildren: () => import('../electricistas/electricistas.module').then( m => m.ElectricistasPageModule)
+    },
+    {
+      path: 'gasistas',
+      loadChildren: () => import('../gasistas/gasistas.module').then( m => m.GasistasPageModule)
+    },
+   ]
   }
 ];
 

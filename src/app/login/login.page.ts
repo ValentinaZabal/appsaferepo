@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
         header: 'Datos incorrectos',
         message: 'Los datos que ingresaste son incorrectos.',
         buttons: ['Aceptar']
-      });
+    });
   
       await alert.present();
     }

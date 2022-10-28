@@ -1,0 +1,27 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)= "onClick()">
+      <ion-icon slot="start" name="menu" style="font-size: 26px"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+<p id="titulo">Electrista</p>
+
+<ion-card  *ngFor="let electricista of electricistas; let i = index">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src={{electricista.logo}} />
+    </ion-avatar>
+    <ion-label>
+      <ion-card-header>{{electricista.nombre}}</ion-card-header>
+      <ion-card-content><span>Rubro:</span> {{electricista.rubro}}</ion-card-content>
+      <ion-card-content><span>Edad:</span> {{electricista.edad}}<span> años</span></ion-card-content>
+    </ion-label>
+    <ion-button slot="end"  [routerLink]="['/menu/reservas']">
+      Contactar
+    </ion-button>
+  </ion-item>
+</ion-card>
+</ion-content>

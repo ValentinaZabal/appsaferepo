@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>plomeros</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)= "onClick()">
+        <ion-icon slot="start" name="menu" style="font-size: 26px"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+</ion-toolbar>
 
 <ion-content>
-
+  <p id="titulo">Plomería</p>´
+  
+  <ion-card  *ngFor="let plomero of plomeros; let i = index">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src={{plomero.logo}} />
+      </ion-avatar>
+      <ion-label>
+        <ion-card-header>{{plomero.nombre}}</ion-card-header>
+        <ion-card-content><span>Rubro:</span> {{plomero.rubro}}</ion-card-content>
+        <ion-card-content><span>Edad:</span> {{plomero.edad}}<span> años</span></ion-card-content>
+      </ion-label>
+      <ion-button slot="end">
+        <a href="tel:{{plomero.telefono}}">Contactar</a>
+      </ion-button>
+    </ion-item>
+  </ion-card>
 </ion-content>
