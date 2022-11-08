@@ -16,10 +16,6 @@ const routes: Routes = [
       loadChildren: () => import('../ayuda/ayuda.module').then( m => m.AyudaPageModule)
     },
     {
-      path: 'reservas',
-      loadChildren: () => import('../reservas/reservas.module').then( m => m.ReservasPageModule)
-    },
-    {
       path: 'nosotras',
       loadChildren: () => import('../nosotras/nosotras.module').then( m => m.NosotrasPageModule)
     },
