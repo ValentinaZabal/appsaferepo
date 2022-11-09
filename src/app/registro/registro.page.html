@@ -24,8 +24,10 @@
 
         <div class="nombredeformulario"><p>Telefono</p>
           <ion-item>
-            <ion-input formControlName="telefono" placeholder="Ingresa tu telefono"></ion-input>
+            <ion-input formControlName="telefono" type="text" pattern="[0-9]+" placeholder="Ingresa tu telefono"></ion-input>
           </ion-item>
+          <span class="errormessage" *ngIf= "f['telefono'].getError('minlength')!=null">El numero de telefono es demasiado corto</span>
+          <span class="errormessage" *ngIf= "f['telefono'].getError('maxlength')!=null">El nombre de usuario es demasiado largo</span>
         </div>
 
         <div class="nombredeformulario"><p>Fecha de nacimiento</p>
@@ -36,7 +38,7 @@
 
         <div class="nombredeformulario"><p>Usuario</p>
           <ion-item>
-            <ion-input formControlName="nombredeusuario" placeholder="Crear el nombre de usuario"></ion-input>
+            <ion-input formControlName="usuario" placeholder="Crear el nombre de usuario"></ion-input>
           </ion-item>
           <span class="errormessage" *ngIf= "f['usuario'].getError('minlength')!=null">El nombre de usuario es demasiado corto</span>
         </div>
@@ -45,6 +47,7 @@
           <ion-item>
             <ion-input type="password" formControlName="password" placeholder="Crear tu contraseña" id="password"></ion-input>
           </ion-item>
+          <span class="errormessage" *ngIf= "f['password'].getError('minlength')!=null">La contraseña es demasiada corta</span>
         </div>
 
         <div class="nombredeformulario"><p>Confirme tu contraseña</p>
@@ -56,8 +59,9 @@
         
         <ion-item id="terminos">
           <ion-checkbox slot="start" formControlName="terminosycondiciones"></ion-checkbox>
-          <ion-label>Acepto terminos y condiciones</ion-label>
+          <ion-label > Acepto terminos y condiciones</ion-label>
         </ion-item>
+        <a href="https://ionicframework.com/docs/api/button" target="_blank" style="position: absolute; left: 25%;">Leer terminos y condiciones</a>
       </form>
       <br>
       <ion-button (click)="guardar()" size="default"  expand="block">

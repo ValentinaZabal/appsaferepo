@@ -20,16 +20,16 @@ export class RegistroPage implements OnInit {
   constructor(public fb: FormBuilder,
     public alertController: AlertController,
     public navCtrl: NavController) {
-    this.formularioRegistro = this.fb.group ({
+    this.formularioRegistro = this.fb.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
       'email':new FormControl("",Validators.compose([ Validators.required, Validators.email ])),
-      'telefono':new FormControl("", Validators.required),
+      'telefono':new FormControl("",Validators.compose([ Validators.required, Validators.minLength(7), Validators.maxLength(15)])),
       'fechadenacimiento':new FormControl("", Validators.required),
-      'nombredeusuario': new FormControl("",Validators.compose([ Validators.required, Validators.minLength(6)])),
-      'password': new FormControl("", Validators.required),
+      'usuario': new FormControl("",Validators.compose([ Validators.required, Validators.minLength(6)])),
+      'password': new FormControl("", Validators.compose([ Validators.required, Validators.minLength(6)])),
       'confirmacionPassword': new FormControl("", Validators.required),
-      'terminosycondiciones': new FormControl("", Validators.compose([ Validators.required, Validators.requiredTrue]))
+      'terminosycondiciones': new FormControl("false", Validators.compose([ Validators.required, Validators.requiredTrue ]))
     },
     {
       validators:this.confirmarcontra('password','confirmacionPassword')
